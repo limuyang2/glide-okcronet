@@ -1,3 +1,5 @@
+RepoDir/
+RepoDir_auto/
 # Gradle files
 .gradle/
 build/
