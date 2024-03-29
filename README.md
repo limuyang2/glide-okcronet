@@ -9,6 +9,18 @@ The network part is provided by [okcronet](https://github.com/limuyang2/okcronet
 * And it does not support customization of CronetEngine. The purpose of this library is to provide complete support.
 
 # Usage
+First introduce the Cronet library:
+```groovy
+//Import Cronet, this method is recommended in mainland China. You can also use other Cronet versions.
+implementation("org.chromium.net:cronet-api:119.6045.31")
+implementation("org.chromium.net:cronet-common:119.6045.31")
+implementation("org.chromium.net:cronet-embedded:119.6045.31")
+
+// Google Play uses this method
+implementation("com.google.android.gms:play-services-cronet:18.0.1")
+```
+
+
 ## Method 1: Manual registration, using a custom CronetEngine (recommended)
 It is recommended to use this method first, because you can reuse the global CronetEngine of the project.
 ### Import

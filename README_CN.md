@@ -7,6 +7,18 @@
 并且不支持对 `CronetEngine` 的定制。本库目的用于提供完整的支持。
 
 # 使用
+先引入 Cronet 库：
+```groovy
+// 引入 Cronet，中国大陆推荐这个方法。您还可以使用其他 Cronet 版本。
+implementation("org.chromium.net:cronet-api:119.6045.31")
+implementation("org.chromium.net:cronet-common:119.6045.31")
+implementation("org.chromium.net:cronet-embedded:119.6045.31")
+
+// Google Play 使用此方法
+implementation("com.google.android.gms:play-services-cronet:18.0.1")
+```
+
+
 ## 方式一，手动注册，使用自定义 `CronetEngine`（推荐此方式）
 推荐优先使用此方式，因为可以使用项目全局的 `CronetEngine`。
 ### 引入
