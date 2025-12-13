@@ -12,12 +12,12 @@ The network part is provided by [okcronet](https://github.com/limuyang2/okcronet
 First introduce the Cronet library:
 ```groovy
 //Import Cronet, this method is recommended in mainland China. You can also use other Cronet versions.
-implementation("org.chromium.net:cronet-api:119.6045.31")
-implementation("org.chromium.net:cronet-common:119.6045.31")
-implementation("org.chromium.net:cronet-embedded:119.6045.31")
+implementation("org.chromium.net:cronet-api:141.7340.3")
+implementation("org.chromium.net:cronet-common:141.7340.3")
+implementation("org.chromium.net:cronet-embedded:141.7340.3")
 
 // Google Play uses this method
-implementation("com.google.android.gms:play-services-cronet:18.0.1")
+implementation("com.google.android.gms:play-services-cronet:18.1.1")
 ```
 
 
@@ -25,7 +25,7 @@ implementation("com.google.android.gms:play-services-cronet:18.0.1")
 It is recommended to use this method first, because you can reuse the global CronetEngine of the project.
 ### Import
 ```kotlin
-implementation("io.github.limuyang2:glide-okcronet:1.0.1")
+implementation("io.github.limuyang2:glide-okcronet:1.0.2")
 ```
 
 ### Registration

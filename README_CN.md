@@ -10,12 +10,12 @@
 先引入 Cronet 库：
 ```groovy
 // 引入 Cronet，中国大陆推荐这个方法。您还可以使用其他 Cronet 版本。
-implementation("org.chromium.net:cronet-api:119.6045.31")
-implementation("org.chromium.net:cronet-common:119.6045.31")
-implementation("org.chromium.net:cronet-embedded:119.6045.31")
+implementation("org.chromium.net:cronet-api:141.7340.3")
+implementation("org.chromium.net:cronet-common:141.7340.3")
+implementation("org.chromium.net:cronet-embedded:141.7340.3")
 
 // Google Play 使用此方法
-implementation("com.google.android.gms:play-services-cronet:18.0.1")
+implementation("com.google.android.gms:play-services-cronet:18.1.1")
 ```
 
 
@@ -23,7 +23,7 @@ implementation("com.google.android.gms:play-services-cronet:18.0.1")
 推荐优先使用此方式，因为可以使用项目全局的 `CronetEngine`。
 ### 引入
 ```kotlin
-implementation("io.github.limuyang2:glide-okcronet:1.0.1")
+implementation("io.github.limuyang2:glide-okcronet:1.0.2")
 ```
 
 ### 注册
@@ -45,7 +45,7 @@ class DemoGlideModule : AppGlideModule() {
 }
 ```
 
-## 方式二，自动注册（不优先考虑）
+## 方式二，自动注册（不推荐）
 此方式会自动生成一个 `CronetEngine`，与项目中的不复用。
 ### 引入
 ```kotlin

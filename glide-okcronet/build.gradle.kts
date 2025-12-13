@@ -23,11 +23,11 @@ android {
     buildTypes {
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "1.8"
+    kotlin {
+        jvmToolchain(17)
     }
 
     publishing {
@@ -47,7 +47,7 @@ dependencies {
 
 //---------- maven upload info -----------------------------------
 
-val versionName = "1.0.1"
+val versionName = "1.0.2"
 
 var signingKeyId = ""
 var signingPassword = ""
