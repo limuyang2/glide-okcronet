@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "io.github.limuyang2.glide_okcronet"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "io.github.limuyang2.glide_okcronet"
-        minSdk = 21
-        targetSdk = 34
+        minSdk = 24
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
     }
@@ -27,11 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlin {
-        jvmToolchain(11)
+        jvmToolchain(17)
     }
     buildFeatures {
         viewBinding = true
@@ -53,9 +53,9 @@ dependencies {
     implementation(libs.glide)
     ksp(libs.glide.ksp)
 
-    implementation("org.chromium.net:cronet-api:119.6045.31")
-    implementation("org.chromium.net:cronet-common:119.6045.31")
-    implementation("org.chromium.net:cronet-embedded:119.6045.31")
+    implementation("org.chromium.net:cronet-api:141.7340.3")
+    implementation("org.chromium.net:cronet-common:141.7340.3")
+    implementation("org.chromium.net:cronet-embedded:141.7340.3")
 
     implementation(project(":glide-okcronet"))
 //    implementation(project(":glide-okcronet-auto"))

@@ -9,6 +9,8 @@ import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.load.model.GlideUrl
 import com.bumptech.glide.module.AppGlideModule
 import io.github.limuyang2.glide.integration.OkCronetUrlLoader
+import io.github.limuyang2.glide_okcronet.App.Companion.application
+import org.chromium.net.CronetEngine
 import java.io.InputStream
 
 /**
@@ -30,8 +32,17 @@ class DemoGlideModule : AppGlideModule() {
 
         Register the component using your own global CronetEngine.
          */
+        val cronetEngine: CronetEngine = CronetEngine.Builder(application)
+            .setStoragePath(context.cacheDir.absolutePath)
+            .enableHttpCache(CronetEngine.Builder.HTTP_CACHE_DISK_NO_HTTP, 1048576)
+            .enableHttp2(true)
+            .enableQuic(true)
+            .enableBrotli(true)
+            .build()
+
+
         registry.replace(
-            GlideUrl::class.java, InputStream::class.java, OkCronetUrlLoader.Factory(App.cronetEngine)
+            GlideUrl::class.java, InputStream::class.java, OkCronetUrlLoader.Factory(cronetEngine)
         )
     }
 
